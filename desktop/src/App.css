@@ -1,0 +1,39 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+
+.app { display: flex; flex-direction: column; height: 100vh; }
+.app-header { display: flex; align-items: center; justify-content: space-between;
+              padding: 12px 20px; background: #1e293b; border-bottom: 1px solid #334155; }
+.logo { font-size: 20px; font-weight: 700; color: #f8fafc; }
+.status { font-size: 12px; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
+.status-idle      { background: #475569; }
+.status-waiting   { background: #b45309; }
+.status-connected { background: #15803d; }
+.status-error     { background: #dc2626; }
+
+.app-main { flex: 1; display: flex; align-items: center; justify-content: center; }
+
+.pairing { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 32px; }
+.pairing h2 { font-size: 20px; color: #f8fafc; }
+.qr-wrapper { background: #f8fafc; padding: 16px; border-radius: 12px; }
+.ip-label { font-family: monospace; color: #94a3b8; }
+.divider { color: #475569; font-size: 13px; }
+.manual-form { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.manual-form input { background: #1e293b; border: 1px solid #334155; color: #e2e8f0;
+                     padding: 8px 12px; border-radius: 8px; width: 160px; }
+.manual-form button { background: #3b82f6; color: #fff; border: none;
+                      padding: 8px 20px; border-radius: 8px; cursor: pointer; }
+
+.preview { position: relative; display: flex; align-items: center; justify-content: center; }
+.preview video { max-width: 100%; max-height: calc(100vh - 130px); border-radius: 8px; }
+.live-badge { position: absolute; top: 12px; left: 12px; background: #dc2626;
+              color: #fff; font-size: 11px; font-weight: 700; padding: 3px 8px;
+              border-radius: 4px; letter-spacing: 1px; }
+
+.stats-panel { display: flex; gap: 16px; padding: 10px 20px; font-family: monospace;
+               font-size: 13px; border-top: 1px solid #334155; background: #1e293b; }
+.stats-panel.good span { color: #22c55e; }
+.stats-panel.fair span { color: #eab308; }
+.stats-panel.poor span { color: #ef4444; }
+.stats-panel.empty { color: #475569; }
+.loss { color: #f97316 !important; }
