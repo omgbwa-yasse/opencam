@@ -1,0 +1,11 @@
+node_modules/
+.gradle/
+build/
+dist/
+*.dll
+*.so
+*.dylib
+.DS_Store
+target/
+*.xcworkspace
+DerivedData/
